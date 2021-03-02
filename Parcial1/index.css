@@ -1,0 +1,16 @@
+body
+{
+    background-color: #158965;
+    font-family: Arial;
+}
+
+table
+{
+    background-color: #FFF8E7;
+    text-align: left;
+    width: 70%;
+}
+th, td
+{
+    border: solid 1px black;
+}
