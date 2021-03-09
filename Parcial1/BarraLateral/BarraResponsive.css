@@ -1,0 +1,63 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li
+{
+    display: block;
+    height: 100%;    
+}
+
+.caja
+{
+    /*float: left;*/
+    border: 1px solid black;
+    
+    margin: 0px;
+    width: calc((100% / 3)- 20px);
+    height: calc((100% / 2)- 20px);
+}
+
+.contenedor1
+{
+    
+    float: left;
+    margin-top: 10px;
+}
+
+.contenedor2
+{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px
+}
+
+#caja1
+{
+    line-height: calc(1em + 5px);
+}
+#caja2
+{
+    line-height: calc(1em + 100px);
+}
+
+/*laptop*/
+@media screen and (max-width: 4000px) and (min-width: 1280px)
+{
+
+}
+
+/*tablet*/
+@media screen and  (max-width: ) and (min-width: 720px)
+{
+
+}
+
+/*telefono*/
+@media screen and  (max-width: 720px) and (min-width: 240px)
+{
+
+}
