@@ -1,0 +1,35 @@
+body
+{
+    background-image: url("gimnasio.jpg");
+    background-size: cover;
+    
+}
+
+.container
+{
+    background-color: gainsboro;
+    padding: 20px;
+    margin-top: 0 auto;
+    opacity: 0.94;
+    border:solid 2px gray;
+    border-radius: 2%;
+    font-size: 18px;
+}
+
+fieldset{
+    border: 1px groove Black !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+}
+
+legend{
+    font-size: 20px !important;
+    width:inherit;
+    padding:0 10px;
+    border-bottom:none;
+}
+
+label #cuestionario
+{
+    margin-right: 5px;
+}

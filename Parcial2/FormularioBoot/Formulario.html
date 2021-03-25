@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="elementos/bootstrap-grid.css">
     <link rel="stylesheet" href="elementos/bootstrap.min.css">
-    <title>Formulario del Gimnasio</title>
+    <link rel="Stylesheet" href="elementos/Formulario.css">
+    <title>Gimnasio patrocinado por TecNM</title>
 </head>
 <body>
+    <header>style="height"</header>    
     <div class="container">
+        <h1>Inscribete a nuestro Gimnasio</h1>
         <form class="form">
             <br>
-        <!--Primera linea---------------------------->
+            
+        <!--Primera fila----------------------------->
             <div class="row">
                 <div class="form-group col-sm-12 col-md-6 col-lg-12">
                     <p> ¿Estudias en el tecnologico?
@@ -21,28 +25,71 @@
                     </p>
                 </div>
             </div>
-        <!--Segunda linea---------------------------->
+        <!--Segunda fila----------------------------->
             <div class="row">
-                <div class="form-group col-sm-7 col-md-6 col-lg-5">
+                <div class="form-group col-sm-7 col-md-6 col-lg-6">
                     <label for="nomCliente"> Nombre: </label>
                     <input id="nomCliente" type="text" class="form-control" placeholder="Ingrese su nombre"/>
                 </div>
-                <div class="form-group col-sm-5 col-md-5 col-lg-4">
+
+                <div class="form-group col-sm-5 col-md-5 col-lg-5">
                     <label for="nControl"> Número de control: </label>
                     <input id="nControl" type="text" class="form-control" placeholder="Ingrese su nControl"/>
                 </div>
             </div>
-        <!--Tercer linea-->
+        <!--Tercer fila------------------------------>
             <div class="row">
-                <div class="form-group col-sm-7 col-md-7 col-lg-4">
-                  <label for="email"> Ingrese su Correo institucional o uno normal: </label>
-                  <input id="email" type="email" class="form-control" placeholder="Correo"/>
+                <div class="form-group col-sm-7 col-md-6 col-lg-6">
+                  <label for="email"> Correo institucional o uno normal: </label>
+                  <input id="email" type="email" class="form-control" placeholder="Ingrese su correo"/>
+                </div>
+
+                <div class="form-group col-sm-5 col-md-5 col-lg-5">
+                    <label for="phone">Teléfono: </label>
+                    <input id="phone" type="text" class="form-control" placeholder="teléfono"/>
                 </div>
             </div>
-        <!--Cuarta linea-->
+        <!--Cuarta fila------------------------------>
             <div class="row">
-                
+                <div class="form-group  col-sm-12 col-md-5 col-lg-4 offset-lg-1">
+                    <label for="turno">Turno: </label>
+                    <input type="radio" name="vm"/> Matutino
+                    <input type="radio" name="vm"/> Vespertino
+                </div>
+
+                <br>
+                <div class="form-group col-sm-12 col-md-5 col-lg-6"> 
+                    <label for="carrera">Carrera: </label>
+                    <select id="carrera" type="select" name="Scarrera">
+                        <option></option>
+                    <label class="" for="carrera">Carrera: </label>
+                        <option>Arquitectura</option>
+                        <option>Ingeniería Civil</option>
+                        <option>Ingeniería Eléctrica</option>
+                        <option>Ingeniería Electrónica</option>
+                        <option>Ingeniería Industrial</option>
+                        <option>Ingeniería Mecatrónica</option>
+                        <option>Ingeniería Mecánica</option>
+                        <option>Ingeniería en Gestion Empresarial</option>
+                        <option>Ingeniería en Sistemas Computacionales</option>
+                        <option>Ingeniería en Administración</option>
+                        <option>Contador Público</option>
+                        <option>Otra carreara</option>                        
+                    </select>
+                </div>
             </div>
+            <br>    
+        <!--Quinta linea----------------------------->
+            <fieldset>
+                <legend>Cuestionario de Salud</legend>
+                <div class="form-row">
+                    <label class="col-lg-3 col-md-2 col-sm-2" id="cuestionario">Sexo: </label>
+                    <div class="form-group">
+                        <input type="radio" name="sx"/> Femenino
+                        <input type="radio" name="sx"/> Masculino
+                    </div>
+                </div>
+            </fieldset>
         </form> 
     </div>
 
