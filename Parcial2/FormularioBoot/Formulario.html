@@ -80,18 +80,137 @@
             </div>
             <br>    
         <!--Quinta linea----------------------------->
+                <!--Lo que se realiza es mantener concatenado los valores,
+                    se usa offset en el label para mantenerlo alejado del fieldset,
+                    col-[tamaño]-n indica que tan alejado se encuentra el INPUT del label dependiendo del tamaño de pantalla 
+                    col-from-label alinia el label con los imputs-->
             <fieldset>
-                <legend>Cuestionario de Salud</legend>
+                <legend>Indice de masa corporal</legend>
+                <!--Sexo-->
                 <div class="form-row">
-                    <label class="col-lg-3 col-md-2 col-sm-2" id="cuestionario">Sexo: </label>
-                    <div class="form-group">
+                    <label class="offset-lg-2 col-lg-1 col-md-1 col-sm-4 col-form-label" id="cuestionario">Sexo: </label>
+                    <div class="form-group col-form-label">
                         <input type="radio" name="sx"/> Femenino
                         <input type="radio" name="sx"/> Masculino
                     </div>
+                    <!--Peso-->
+                    <label class="offset-lg-1 col-lg-1 offset-md-1 col-md-1 col-sm-4 col-form-label" id="cuestionario">Peso: </label>
+                    <div class="form-group">
+                        <input id="txtPeso" size="3" type="text" class="form-control" placeholder="peso"/>
+                    </div>
+                    <select>
+                        <option>kg</option>
+                        <option>lb</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <label class="offset-lg-3 col-lg-1 offset-md-1 col-md-1 col-sm-2 col-form-label" id="cuestionario">Edad: </label>
+                    <div class="form-group">
+                        <input id="txtEdad" size="4" type="text" class="form-control" placeholder="edad"/>
+                    </div>
+                    <!--Altura------------->
+                    <label class="offset-lg-2 col-lg-1 offset-sm-2 col-sm-2 col-form-label" id="cuestionario">Altura: </label>
+                    <div class="form-group">
+                        <input id="txtAltura" size="3" type="text" class="form-control" placeholder="cm"/>
+                    </div>
+                </div>
+            </fieldset>
+            <!--Segundo fieldset--------------------->
+            <fieldset>
+                <legend>Cuestionario previo de Salud</legend>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        1.-¿Ha tenido o tiene alguna lesión ósea?: 
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad1"/> Si
+                        <input type="radio" name="rad1"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        2.- ¿Ha tenido o tiene alguna lesíon muscular?
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad2"/> Si
+                        <input type="radio" name="rad2"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        3.- ¿Padece alguna enfermedad cardiovascular? 
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad3"/> Si
+                        <input type="radio" name="rad3"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        4.- ¿Padece de anemia en la actualidad? 
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad4"/> Si
+                        <input type="radio" name="rad4"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        5.- ¿Padece alguna enfermedad en la actualidad? 
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad5"/> Si
+                        <input type="radio" name="rad5"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        6.- ¿Ha practicado o practica alguna actividad deportiva? 
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad6"/> Si
+                        <input type="radio" name="rad6"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-9 col-sm-9" id="cuestionario">
+                        7.- ¿Ha practicado o practica alguna actividad deportiva?
+                    </label>
+                    <div class="form-group">
+                        <input type="radio" name="rad7"/> Si
+                        <input type="radio" name="rad7"/> No
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="col-lg-8 col-md-8 col-sm-10" id="cuestionario1">
+                        8.-¿Padece alguna de estas entermedades?:
+                        <ol>
+                            <ul>Diabetes:
+                                <input class="offset-lg-1 offset-md-1 offset-sm-1" type="radio" name="rad8-1"/> Si
+                                <input type="radio" name="rad8-1"/> No
+                            </ul>
+                            <ul>Hipertension:
+                                <input class="offset-lg-1 offset-md-1 offset-sm-1" type="radio" name="rad8-2"/> Si
+                                <input type="radio" name="rad8-2"/> No
+                            </ul>
+                            <ul> Raumatismo:
+                                <input class="offset-lg-1 offset-md-1 offset-sm-1" type="radio" name="rad8-3"/> Si
+                                <input type="radio" name="rad8-3"/> No
+                            </ul>
+                            <ul> Arritmia: 
+                                <input class="offset-lg-1 offset-md-1 offset-sm-1" type="radio" name="rad8-4"/> Si
+                                <input type="radio" name="rad8-4"/> No
+                            </ul>
+                            <ul>Insuficiencia coronaría:
+                                <input class="offset-lg-1 offset-md-1 offset-sm-1" type="radio" name="rad8-4"/> Si
+                                <input type="radio" name="rad8-4"/> No
+                            </ul>
+                        </ol> 
+                    </label>
                 </div>
             </fieldset>
         </form> 
     </div>
-
 </body>
 </html>

@@ -33,3 +33,15 @@ label #cuestionario
 {
     margin-right: 5px;
 }
+
+span
+{
+    visibility: hidden;
+}
+
+ul
+{
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+}
