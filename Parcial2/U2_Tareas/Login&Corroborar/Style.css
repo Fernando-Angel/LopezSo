@@ -71,3 +71,14 @@ body
     border: 1px solid rgb(161, 42, 42);
     display: none;
 }
+.form #user_error1, .form #password_error1
+{
+    margin-top: 4px;
+    width: 362px;
+    color: rgb(67, 194, 8);
+    background: rgba(9, 255, 0, 0.1);
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid rgb(46, 161, 42);
+    display: none;
+}
