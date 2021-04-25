@@ -12,7 +12,7 @@ contraseña.addEventListener('textInput', contraseña_verificado);
 
 function IniciarSesion()
 {
-    if (usuario.value.length < 9)
+    if (usuario.value.length <= 8)
     {
         usuario.style.border = "1px solid red";
         us_error1.style.display = 'none';
@@ -20,7 +20,7 @@ function IniciarSesion()
         usuario.focus();
         return false;
     }
-    if (contraseña.value.length < 9)
+    if (contraseña.value.length < 3)
     {
         contraseña.style.border = "1px solid red";
         pas_error1.style.display = 'none';
@@ -30,24 +30,31 @@ function IniciarSesion()
     }
 }
 
+
+//Aqui se encuentra al usuario y contraseña
+//Usuario: Fernando, contraseña: 1234
+//Las advertencias no cambian aun con la contraseña correcta que indicaria si lo es o none
+//al momento de usar if similares a los de IniciarSesion se muestra la contraseña correcta.
+//primer if(usuario.value.length >= 9)
+//segundo if(contraseña.value.length >= 4)
 function usuario_verificado()
 {
-    if (usuario.value.length >= 8)
+    if (usuario.equals('Fernando'))
     {
         usuario.style.border = "1px solid rgb(144, 150, 155);";
         us_error.style.display = "none";
         us_error1.style.display = 'block';
-        return true;
+        return false;
     }
 }
 
 function contraseña_verificado()
 {
-    if (contraseña.value.length >= 8)
+    if (contraseña.equals('1234'))
     {
         contraseña.style.border = "1px solid rgb(144, 150, 155);";
-        pas_error.style.display = "none";
+        pas_error.style.display = 'none';
         pas_error1.style.display = 'block';
-        return true;
+        return false;
     }
 }

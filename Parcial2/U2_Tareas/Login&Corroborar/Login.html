@@ -10,16 +10,17 @@
 <body>
     <div class="container">
         <h1 class="label">Por favor inicia sesión</h1>
-        <form class="form" method="post" name="form" onsubmit="return IniciarSesion()">
+        <form class="form" method="post" name="form" 
+        onsubmit="return IniciarSesion()">
             <div class="font">Ingrese su usuario:</div>
-            <input type="usuario" name="user" id="log">
+            <input autocomplete="off" type="usuario" name="user" id="log">
             <div id="user_error">Por favor ingrese su Usuario</div>
-            <div id="user_error1">Por favor ingrese su Usuario</div>
+            <div id="user_error1">Usuario Correcto</div>
 
             <div class="font font2">Ingrese su contraseña:</div>
             <input type="password" name="password" id="pass">
             <div id="password_error">Por favor ingrese su Contraseña</div>
-            <div id="password_error1">Por favor ingrese su Contraseña</div>
+            <div id="password_error1">Sea bienvenido</div>
 
             <button type="submit">Inicio de sesión</button>
         </form>
