@@ -4,6 +4,7 @@ var contraseña = document.forms['form']['password'];
 
 var us_error = document.getElementById('user_error');
 var pas_error = document.getElementById('password_error');
+
 var us_error1 = document.getElementById('user_error1');
 var pas_error1 = document.getElementById('password_error1');
 
@@ -12,7 +13,7 @@ contraseña.addEventListener('textInput', contraseña_verificado);
 
 function IniciarSesion()
 {
-    if (usuario.value.length <= 8)
+    if (usuario.value.length < 9)
     {
         usuario.style.border = "1px solid red";
         us_error1.style.display = 'none';
@@ -20,7 +21,7 @@ function IniciarSesion()
         usuario.focus();
         return false;
     }
-    if (contraseña.value.length < 3)
+    if (contraseña.value.length < 6)
     {
         contraseña.style.border = "1px solid red";
         pas_error1.style.display = 'none';
@@ -35,26 +36,26 @@ function IniciarSesion()
 //Usuario: Fernando, contraseña: 1234
 //Las advertencias no cambian aun con la contraseña correcta que indicaria si lo es o none
 //al momento de usar if similares a los de IniciarSesion se muestra la contraseña correcta.
-//primer if(usuario.value.length >= 9)
-//segundo if(contraseña.value.length >= 4)
+//primer if(usuario.equals('Fernando'))
+//segundo if(contraseña.equals('1234'))
 function usuario_verificado()
 {
-    if (usuario.equals('Fernando'))
+    if (usuario.value.length >= 8)
     {
         usuario.style.border = "1px solid rgb(144, 150, 155);";
-        us_error.style.display = "none";
         us_error1.style.display = 'block';
-        return false;
+        us_error.style.display = "none";        
+        return true;
     }
 }
 
 function contraseña_verificado()
 {
-    if (contraseña.equals('1234'))
+    if (contraseña.value.length >= 5)
     {
         contraseña.style.border = "1px solid rgb(144, 150, 155);";
-        pas_error.style.display = 'none';
         pas_error1.style.display = 'block';
-        return false;
+        pas_error.style.display = 'none';
+        return true;
     }
 }
