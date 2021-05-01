@@ -22,7 +22,7 @@
             }
             else
                 $('.passError').css("display","none");
-
+            
             
             if(user == 'Fer' && pass =='1234')
             {
