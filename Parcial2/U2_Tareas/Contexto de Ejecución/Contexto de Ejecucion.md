@@ -45,7 +45,7 @@ Para cada llamada de función, el motor JavaScript crea un nuevo <u>contexto de 
 
 <p align="center"> <img src="Imagenes/Pila 3.png" alt="drawing" width="300"/>
 
-En el ejemplo utilizado podemos ver que el contexto de ejecución de la función crea el objeto <span style="background-color: #f3e2d6; color:red">*arguments*</span> que hace referencia a todos los parámetros pasados a la función, se establece este valor en el objeto global e inicializa el parametro *<span style="background-color: #f3e2d6; color:red">*a*</span>* como <span style="background-color: #f3e2d6; color:red">*undefined*</span>
+En el ejemplo utilizado podemos ver que el contexto de ejecución de la función crea el objeto <span style="background-color: #f3e2d6; color:red">*arguments*</span> que hace referencia a todos los parámetros pasados a la función, se establece este valor en el objeto global e inicializa el parametro <span style="background-color: #f3e2d6; color:red">*a*</span> como <span style="background-color: #f3e2d6; color:red">*undefined*</span>
 <br>
 <br> Durante la fase de ejecución del contexto de ejecución de función, <span style="background-color: #f3e2d6; color:red">*10*</span> el parámetro se asigna en <span style="background-color: #f3e2d6; color:red">*a*</span> y devuelve el resultado <span style="background-color: #f3e2d6; color:red">*100*</span> al contexto de ejecución global:
 
