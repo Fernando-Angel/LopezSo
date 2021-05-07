@@ -6,8 +6,12 @@ CREATE TABLE usuario
 	nombre VARCHAR(40) NOT NULL,
 	apellidopat VARCHAR(40) NULL,
 	apellidomat VARCHAR(40) NULL,
+	email VARCHAR(50) NULL,
 	usuario VARCHAR(50) NULL,
-	contraseña VARCHAR(50) NULL
+	contraseña VARCHAR(50) NULL,	
+	fecha_vigencia date NULL,
+	fecha_expiracion date NULL,
+	telefono VARCHAR(20) NULL
 	
 	PRIMARY  KEY (id_usuario)
 )
