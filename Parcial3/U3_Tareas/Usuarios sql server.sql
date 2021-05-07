@@ -7,9 +7,8 @@ CREATE TABLE usuario
 	apellidopat VARCHAR(40) NULL,
 	apellidomat VARCHAR(40) NULL,
 	usuario VARCHAR(50) NULL,
-	contraseña VARCHAR(50) NULL,
-	fecha_vigencia date NULL,
-	fecha_expiracion date NULL,
+	contraseña VARCHAR(50) NULL
+	
 	PRIMARY  KEY (id_usuario)
 )
 
