@@ -7,7 +7,7 @@ try
     $consultaSql = "SELECT nombre,apellidopat,apellidomat,usuario,contrasena FROM usuario";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
-    $result = $consulta->fetch(PDO::FETCH_ASSOC);
+    //$result = $consulta->fetch(PDO::FETCH_ASSOC);
     
     $dsn = "sqlsrv:Server=localhost;Database=lopezso";
     $conn = new PDO($dsn, "sa", "1234Fernando");
@@ -15,16 +15,16 @@ try
 
     foreach ($conn->query($consultaSql) as $result)
     {
-        print"<h2>PDO::FETCH_ASOC</h2>";
+        print"<h2>PDO::FETCH_ASSOC</h2>";
         //print "<br>";
         //print_r($result);
         var_dump($result);
         print "<br>";
-        printf("<b>nombre       = </b> %s <br>",$result['nombre']);
+        printf("<b>Nombre       = </b> %s <br>",$result['nombre']);
         printf("<b>ApePaterno   = </b> %s <br>",$result['apellidopat']);
         printf("<b>ApeMaterno   = </b> %s <br>",$result['apellidomat']);
-        printf("<b>usuario      = </b> %s <br>",$result['usuario']);
-        printf("<b>contrasena   = </b> %s <br>",$result['contrasena']);        
+        printf("<b>Usuario      = </b> %s <br>",$result['usuario']);
+        printf("<b>Contrasena   = </b> %s <br>",$result['contrasena']);        
         print "<br><br><br>";
     }
     
