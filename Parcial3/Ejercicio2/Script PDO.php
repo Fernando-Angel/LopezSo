@@ -5,8 +5,8 @@ include "connect.php";
 try 
 {
     $consultaSql = "SELECT nombre,apellidopat,apellidomat,usuario,contrasena FROM usuario";
-    $consulta = $con -> prepare($consultaSql);
-    $consulta -> execute();
+    //$consulta = $con -> prepare($consultaSql);
+    //$consulta -> execute();
     //$result = $consulta->fetch(PDO::FETCH_ASSOC);
     
     $dsn = "sqlsrv:Server=localhost;Database=lopezso";
