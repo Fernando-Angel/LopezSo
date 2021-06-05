@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 //creacion del string
 $string = '{"id":10,"Nombre":"Fernando ALS","Profesion":"Estudiante",
