@@ -55,24 +55,69 @@ body
     margin-top: 20px;
     margin-left: 23%;
     border-radius: 7px;
+    color: black;
     outline: none;
     cursor: pointer;
     transition: .5s;
-    border: rgb(87, 57, 31);
+    border: rgb(206, 111, 28);
 }
 .form button:hover
 {
     background-color: rgb(182, 121, 67);
 }
 
-.form .usError, .form .passError
+.msg-error
 {
-    margin-top: 4px;
-    width: 350px;
-    color: rgb(194, 8, 8);
-    background: rgba(255, 0, 0, 0.1);
-    text-align: center;
-    border-radius: 3px;
-    border: 1px solid rgb(161, 42, 42);
-    display: none;
+    color:red;
+    display: block;
+    margin-top: 2px;
+    margin-left: 3px;
+}
+
+/*HTML BIENVENIDO*/
+.ctn-welcome
+{
+    width: 100%;
+    max-width: 600px;
+    text-align: center;    
+    padding: 40px;
+    margin: auto;
+    margin-top: 120px;
+    background: rgb(201, 180, 219);
+    border: 2px solid rgb(141, 120, 161);
+    border-radius: 30px;
+}
+
+.tittle
+{
+    font-weight: 400px;
+    font-size: 45px;
+}
+.logo
+{
+    width: 80px;
+}
+
+.tittle b
+{
+    color: #BF4222;
+}
+
+.cerrar-sesion
+{
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+    display: block;
+    padding: 20px;
+    margin-top: 20px;
+    background: linear-gradient(0deg, #cf7754, #c4237e);
+    color: white;
+    font-size: 20px;
+    font-weight: 100px;
+    border: 1px solid rgb(141, 120, 161);
+}
+.cerrar-sesion:hover
+{
+    background: linear-gradient(150deg, #bb562e, #c4237e);
 }

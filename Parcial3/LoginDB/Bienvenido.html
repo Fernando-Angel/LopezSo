@@ -10,29 +10,19 @@
 
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
-    <div class="container">
+    <div class="ctn-welcome">
+        <img src="logo.png" alt="" class="logo">
+        <h1 class="tittle">Eres bienvenido
+            <b><br>Usuario</br></b>
+        </h1>
 
-        <form class="form" action="#" name="form" onsubmit="Sesion()">
-            <h1 class="label">Por favor inicie sesion</h1>
-            <div class="font">Usuario:</div>
-                <input autocomplete="off" type="user" name="" id="usr" placeholder="usuario">
-            <span class="msg-error">usuario incorrecto</span>
-
-            <div class="font font2">Contraseña:</div>
-                <input autocomplete="off" type="password" name="" id="pass" placeholder="contraseña">
-            <span class="msg-error">contraseña incorrecta</span>
-
-            <button type="button" class="btn btn-primary" id="btn">Iniciar Sesión</button>
-            <!--<button type="submit">Inicio de sesión</button>-->
-        </form>
+        <button type="button" class="cerrar-sesion" id="btn">Cerrar Sesión</button>
     </div>
-
 </body>
 </html>
