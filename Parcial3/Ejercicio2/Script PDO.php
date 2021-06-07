@@ -28,7 +28,7 @@ try
         print "<br><br><br>";
     }
     
-    $consulta->closeCursor();
+    //$consulta->closeCursor();
 
 } catch (PDOException $e) 
 {

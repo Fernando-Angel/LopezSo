@@ -1,3 +1,7 @@
+<?php
+    require "login.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../elementos/Style.css">
 
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -19,17 +23,18 @@
     
     <div class="container">
 
-        <form class="form" action="#" name="form" onsubmit="Sesion()">
+        <!--<form class="form" method="post" name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ;?>"-->
+        <form class="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
             <h1 class="label">Por favor inicie sesion</h1>
             <div class="font">Usuario:</div>
-                <input autocomplete="off" type="user" name="" id="usr" placeholder="usuario">
-            <span class="msg-error">usuario incorrecto</span>
+                <input autocomplete="off" type="user" name="user" id="usr" placeholder="usuario">
+            <span class="msg-error"><?php echo $usuario_error; ?></span>
 
             <div class="font font2">Contraseña:</div>
-                <input autocomplete="off" type="password" name="" id="pass" placeholder="contraseña">
-            <span class="msg-error">contraseña incorrecta</span>
+                <input autocomplete="off" type="password" name="passwd" id="pass" placeholder="contraseña">
+            <span class="msg-error"><?php echo $password_error; ?></span>
 
-            <button type="button" class="btn btn-primary" id="btn">Iniciar Sesión</button>
+            <button type="submit" href="login.php" value="Iniciar" class="btn btn-primary" id="btn">Iniciar Sesión</button>
             <!--<button type="submit">Inicio de sesión</button>-->
         </form>
     </div>

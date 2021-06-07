@@ -1,3 +1,15 @@
+<?php
+    /*
+    session_start();
+
+    if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
+    {
+        header("location: LoginBD.php");
+        exit;
+    }
+    */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../elementos/Style.css">
 
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -17,12 +29,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <div class="ctn-welcome">
-        <img src="logo.png" alt="" class="logo">
+        <img src="../elementos/logo.png" alt="" class="logo">
         <h1 class="tittle">Eres bienvenido
             <b><br>Usuario</br></b>
         </h1>
 
-        <button type="button" class="cerrar-sesion" id="btn">Cerrar Sesión</button>
+        <button href="cerrar-sesion.php" class="cerrar-sesion">Cerrar Sesión</button>
     </div>
 </body>
 </html>
