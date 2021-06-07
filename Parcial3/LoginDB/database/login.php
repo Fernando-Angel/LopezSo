@@ -1,15 +1,16 @@
 <?php
 
 session_start();
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
-{
-    header("location: Bienvenido.php");
-    exit;
-}
+
+    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
+    {
+        header("location: Bienvenido.php");
+        exit;
+    }
 
 require_once "connection.php";
 
-$usuario = $password = "";
+$usuario = $password = $nombre = "";
 $usuario_error = $password_error = "";
 
 if($_SERVER["REQUEST_METHOD"] === "POST")
@@ -33,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
     //VALIDAR USUARIO y CONTRASEÑA
     if(empty($usuario_error) && empty($password_error))
     {
-        $sql = "SELECT usuario, contrasena FROM usuario WHERE usuario=?";
+        $sql = "SELECT usuario, contrasena, nombre FROM usuario WHERE usuario=?";
 
         if($stmt = mysqli_prepare($con, $sql))
         {
@@ -47,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
             if(mysqli_stmt_num_rows($stmt) == 1)
             {
                 
-                mysqli_stmt_bind_result($stmt, $usuario, $hashed_password);
+                mysqli_stmt_bind_result($stmt, $usuario, $hashed_password, $nombre);
                 if(mysqli_stmt_fetch($stmt))
                 {
                     if(password_verify($password, $hashed_password))
@@ -56,8 +57,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
 
                         $_SESSION["loggedin"] = true;
                         $_SESSION["usuario"] = $usuario;
+                        $_SESSION['nombre'] = $nombre;
                         header("location: Bienvenido.php");
-
                     }else
                     {
                         $password_error = "La contraseña no es valida";
@@ -65,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST")
                 }
             }else
             {
-                $usuario_error = "No se ha encontrado usuario similares";
+                $usuario_error = "No se ha encontrado usuarios similares";
             }
         }else
         {

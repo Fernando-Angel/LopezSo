@@ -1,13 +1,10 @@
 <?php
-    /*
     session_start();
-
-    if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
+    /*if(! isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === true)
     {
-        header("location: LoginBD.php");
+        header("location: Bienvenido.php");
         exit;
-    }
-    */
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -31,10 +28,10 @@
     <div class="ctn-welcome">
         <img src="../elementos/logo.png" alt="" class="logo">
         <h1 class="tittle">Eres bienvenido
-            <b><br>Usuario</br></b>
+            <b><br><span><?php echo $_SESSION['nombre']; ?></span></br></b>
         </h1>
-
-        <button href="cerrar-sesion.php" class="cerrar-sesion">Cerrar Sesión</button>
+        <br></br>
+        <a href="cerrar.php" class="close-sesion">Cerrar Sesión</a>
     </div>
 </body>
 </html>

@@ -28,13 +28,13 @@
             <h1 class="label">Por favor inicie sesion</h1>
             <div class="font">Usuario:</div>
                 <input autocomplete="off" type="user" name="user" id="usr" placeholder="usuario">
-            <span class="msg-error"><?php echo $usuario_error; ?></span>
+            <span class="msg-error"><?php echo $usuario_error ?></span>
 
             <div class="font font2">Contraseña:</div>
                 <input autocomplete="off" type="password" name="passwd" id="pass" placeholder="contraseña">
-            <span class="msg-error"><?php echo $password_error; ?></span>
+            <span class="msg-error"><?php echo $password_error ?></span>
 
-            <button type="submit" href="login.php" value="Iniciar" class="btn btn-primary" id="btn">Iniciar Sesión</button>
+            <button type="submit" value="Iniciar" class="btn btn-primary" id="btn">Iniciar Sesión</button>
             <!--<button type="submit">Inicio de sesión</button>-->
         </form>
     </div>
