@@ -14,9 +14,6 @@
 			$usuario = "";
 			$descripcion = "";
 		}
-		if ($ejecutar){
-			echo "<h3>Insertado Correctamente</h3>";
-		}
 		header("location: Formulario.php");
 	}
 ?>
@@ -56,12 +53,6 @@ if (isset($_POST['actualizar'])){
 
 $actualizar = "UPDATE cliente SET nombre='$nombre1', usuario='$usuario1', descripcion='$descripcion1' WHERE id_usuario = $editar_id;" ;
 $ejecutar = mysqli_query($con, $actualizar);
-
-if ($ejecutar)
-	{
-	echo "<script>alert('Datos Actualizados!')</script>";
-	echo "<script>windoows.open('Formulario.php','_self')</script>";
-	}
 	header("location: Formulario.php");
 }
 ?>

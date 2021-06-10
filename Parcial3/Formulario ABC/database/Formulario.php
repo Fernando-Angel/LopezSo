@@ -3,11 +3,11 @@
 ?>
 
 <!DOCTYPE html> 
-<meta charset="UTF-8">
+<meta charset="ANSI">
 
 <html>
 <head>    
-<meta charset="UTF-8">
+<meta charset="ANSI">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altas, Bajas y Consultas</title>
@@ -30,7 +30,7 @@
 	<input autocomplete="off"type="text" class="ingreso"  name="usuario" placeholder = "Escriba su contraseña"><br />
 	<label>Descripcion:<br></label>
 	<input autocomplete="off"type="text" name="descripcion" placeholder = "Escriba su email"><br /><br>
-	<input type="submit" name="insert"  value ="INSERTAR DATOS">
+	<input type="submit" name="insert" onclick="insertar()"  value ="INSERTAR DATOS">
 
  	</form>
 
@@ -57,8 +57,8 @@ while ( $fila = mysqli_fetch_array($ejecutar)) {
 	$descripcion = $fila['descripcion'];
 ?>
 <tr align="center">
-<td><span class="glyphicon glyphicon-pencil"><a href="Formulario.php?editar=<?php echo $id; ?>">Editar</a></span></td>
-<td><span class="glyphicon glyphicon-search"><a href="#" onclick="preguntar(<?php echo $fila['id_usuario']?>)">Borrar</a></span></td>
+<td><a href="Formulario.php?editar=<?php echo $id; ?>">Editar</a></td>
+<td><a href="#" onclick="preguntar(<?php echo $fila['id_usuario']?>)">Borrar</a></td>
 <td><?php echo $id; ?></td>
 <td><?php echo $nombre; ?></td>
 <td><?php echo $usuario; ?></td>
@@ -67,21 +67,6 @@ while ( $fila = mysqli_fetch_array($ejecutar)) {
 </tr>
 <?php } ?>
 </table>
-
-<script type="text/javascript">
-function preguntar(id)
-{
-	var confirmar = confirm('¿Estás seguro de borrar este registro?');
-	if(confirmar)
-	{ window.location.href = "Formulario.php?borrar="+id; }			
-	
-	function insertar()
-	{
-		if(alert('El cliente se ha registrado correctamente'))
-		{ window.location.href = "Formulario.php?="; }			
-	}		
-}
-</script>
 
 <?php
 	if(isset($_POST["insert"])){
@@ -100,5 +85,21 @@ if(isset($_GET['borrar'])){
 	include("editar.php");
 }
 ?>
+
+
+<script type="text/javascript">
+function preguntar(id)
+	{
+		var confirmar = confirm('¿Estás seguro de borrar este registro?');
+		if(confirmar)
+			{ window.location.href = "Formulario.php?borrar="+id; }	
+	}
+function insertar()
+	{
+		if(alert('El cliente se ha registrado correctamente'))
+		{ window.location.href = "Formulario.php?="; }			
+	}
+</script>
 </body>
 </html>
+
