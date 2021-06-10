@@ -25,26 +25,26 @@
     <form method="POST" action="Formulario.php">
     <br><a class="retorno" href="Bienvenido.php"><-----Regresar<br><br></a>
 	<label>Nombre:<br></label>
-	<input autocomplete="off" type="text" class="ingreso1"  name="nombre" placeholder = "Escriba su nombre"><br />
+	<input autocomplete="off"type="text" class="ingreso1"  name="nombre" placeholder = "Escriba su nombre"><br />
 	<label>Usuario:<br> </label>
-	<input autocomplete="off" type="text" class="ingreso"  name="usuario" placeholder = "Escriba su contraseña"><br />
+	<input autocomplete="off"type="text" class="ingreso"  name="usuario" placeholder = "Escriba su contraseña"><br />
 	<label>Descripcion:<br></label>
-	<input autocomplete="off" type="text" name="descripcion" placeholder = "Escriba su email"><br /><br>
-	<input type="submit" name="insert" value = "INSERTAR DATOS">
+	<input autocomplete="off"type="text" name="descripcion" placeholder = "Escriba su email"><br /><br>
+	<input type="submit" name="insert"  value ="INSERTAR DATOS">
 
  	</form>
 
 
 <br/>
-<br> s </br>
+<br> </br>
 <center><table width="500" border="2" style="background-color: #F9F9F9; ">
-	<tr>
-		<th>Id</th>
-		<th>Usuario</th>
-		<th>Password</th>
-		<th>Email</th>
+	<tr align="center">		
 		<th>Editar</th>
 		<th>Borrar</th>
+		<th>Id</th>
+		<th>Nombre</th>
+		<th>Usuario</th>
+		<th>Descripcion</th>
 	</tr></center>
 <?php
 $consulta = "SELECT * FROM cliente	";
@@ -55,20 +55,33 @@ while ( $fila = mysqli_fetch_array($ejecutar)) {
 	$nombre = $fila['nombre'];
 	$usuario = $fila['usuario'];
 	$descripcion = $fila['descripcion'];
-
-	$i++;
-
 ?>
 <tr align="center">
+<td><span class="glyphicon glyphicon-pencil"><a href="Formulario.php?editar=<?php echo $id; ?>">Editar</a></span></td>
+<td><span class="glyphicon glyphicon-search"><a href="#" onclick="preguntar(<?php echo $fila['id_usuario']?>)">Borrar</a></span></td>
 <td><?php echo $id; ?></td>
 <td><?php echo $nombre; ?></td>
 <td><?php echo $usuario; ?></td>
 <td><?php echo $descripcion; ?></td>
-<td><a href="Formulario.php?editar=<?php echo $id; ?>">Editar</a></td>
-<td><a href="Formulario.php?borrar=<?php echo $id; ?>">Borrar</a></td>
+
 </tr>
 <?php } ?>
 </table>
+
+<script type="text/javascript">
+function preguntar(id)
+{
+	var confirmar = confirm('¿Estás seguro de borrar este registro?');
+	if(confirmar)
+	{ window.location.href = "Formulario.php?borrar="+id; }			
+	
+	function insertar()
+	{
+		if(alert('El cliente se ha registrado correctamente'))
+		{ window.location.href = "Formulario.php?="; }			
+	}		
+}
+</script>
 
 <?php
 	if(isset($_POST["insert"])){
