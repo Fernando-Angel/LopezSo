@@ -25,11 +25,11 @@
     <form method="POST" action="Formulario.php">
     <br><a class="retorno" href="Bienvenido.php"><-----Regresar<br><br></a>
 	<label>Nombre:<br></label>
-	<input type="text" class="ingreso1"  name="nombre" placeholder = "Escriba su nombre"><br />
+	<input autocomplete="off" type="text" class="ingreso1"  name="nombre" placeholder = "Escriba su nombre"><br />
 	<label>Usuario:<br> </label>
-	<input type="text" class="ingreso"  name="usuario" placeholder = "Escriba su contraseña"><br />
+	<input autocomplete="off" type="text" class="ingreso"  name="usuario" placeholder = "Escriba su contraseña"><br />
 	<label>Descripcion:<br></label>
-	<input type="text" name="descripcion" placeholder = "Escriba su email"><br /><br>
+	<input autocomplete="off" type="text" name="descripcion" placeholder = "Escriba su email"><br /><br>
 	<input type="submit" name="insert" value = "INSERTAR DATOS">
 
  	</form>

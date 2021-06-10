@@ -40,9 +40,9 @@ if(isset($_GET['editar'])){
 ?>
 <br />
 <form method="POST" action="">
-<input type="text" name="txtnombre" value="<?php echo $nombre; ?>"><br/>
-<input type="text" name="txtusuario" value="<?php echo $usuario; ?>"><br/>
-<input type="text" name="txtdescripcion" value="<?php echo $descripcion; ?>"><br/>
+<input autocomplete="off" type="text" name="txtnombre" value="<?php echo $nombre; ?>"><br/>
+<input autocomplete="off" type="text" name="txtusuario" value="<?php echo $usuario; ?>"><br/>
+<input autocomplete="off" type="text" name="txtdescripcion" value="<?php echo $descripcion; ?>"><br/>
 <input type="submiT" name="actualizar" value="ACTUALIZAR DATOS">
 </form>
 
@@ -55,12 +55,6 @@ if (isset($_POST['actualizar'])){
 
 $actualizar = "UPDATE cliente SET nombre='$nombre1', usuario='$usuario1', descripcion='$descripcion1' WHERE id_usuario = $editar_id;" ;
 $ejecutar = mysqli_query($con, $actualizar);
-
-if ($ejecutar)
-	{
-	echo "<script>alert('Datos Actualizados!')</script>";
-	echo "<script>windoows.open('Formulario.php','_self')</script>";
-	}
 	header("location: Formulario.php");
 }
 ?>
@@ -71,11 +65,18 @@ if(isset($_GET['borrar'])){
 	$borrar_id = $_GET['borrar'];
 	$borrar = "DELETE FROM cliente WHERE id_usuario = $borrar_id;";
 	$ejecutar = mysqli_query($con, $borrar);
-
-	
-	echo "<script>alert('El usuario ha sido borrado!')</script>";
-	echo "<script>windoows.open('Formulario.php','_self')</script>";
 	
 	header("location: Formulario.php");
 }
 ?>
+
+
+<script type="text/javascript">
+		function confirmar(id)
+		{
+			if(alert('El cliente se ha actualizado correctamente'))
+			{
+				window.location.href = "Formulario.php?="+id;
+			}			
+		}
+</script>
