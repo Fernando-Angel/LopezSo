@@ -27,6 +27,8 @@ echo '<br>';
 echo password_hash('perez', PASSWORD_DEFAULT);              //$2y$10$Qz1MuUquINzu4KokqO84zOSObnrOLavgBXqCSy1j./bFZ0JtSLCWe
 echo '<br>';
 
+echo password_hash('holal', PASSWORD_DEFAULT);              //$2y$10$Qz1MuUquINzu4KokqO84zOSObnrOLavgBXqCSy1j./bFZ0JtSLCWe
+echo '<br>';
 //echo md5('ejemplo');
 //echo '<br>';
 ?>

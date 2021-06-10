@@ -1,0 +1,29 @@
+
+.ingreso
+{
+    margin-right: 20px;
+    margin-left: 45px;
+}
+.ingreso1
+{
+    margin-right: 20px;
+    margin-left: 38px;
+}
+
+label
+{
+    text-align: center;
+    font-size: 25px;
+}
+
+.retorno
+{
+    color: red;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+tr
+{
+    border: rgb(116, 67, 116) 2px solid;
+}

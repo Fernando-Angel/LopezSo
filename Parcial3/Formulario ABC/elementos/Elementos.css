@@ -1,0 +1,37 @@
+body
+{
+    background-image: url("edificios.jpg");
+    background-color: rgb(128, 0, 128);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingreso
+{
+    margin-right: 20px;
+    margin-left: 45px;
+}
+.ingreso1
+{
+    margin-right: 20px;
+    margin-left: 38px;
+}
+
+label
+{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.retorno
+{
+    color: red;
+    font-size: 20px;
+}
+
+tr
+{
+    border: rgb(117, 47, 117) 2px solid;
+}
